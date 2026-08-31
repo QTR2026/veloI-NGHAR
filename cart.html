@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سلة التسوّق | VELORA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+    <a href="index.html" class="logo">VELO<span>RA</span></a>
+    <nav class="main-nav">
+      <a href="index.html">الرئيسية</a>
+      <a href="index.html?cat=beauty#shop">التجميل</a>
+      <a href="index.html?cat=perfumes#shop">العطور</a>
+      <a href="index.html?cat=fashion#shop">الأزياء</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-open-cart aria-label="السلة">
+        🛍
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <div class="section-head" style="margin-top:30px;">
+      <h2>سلة التسوّق</h2>
+    </div>
+    <div class="cart-wrap">
+      <div id="cart-items-wrap">
+        <div class="loader-row">جارِ تحميل السلة…</div>
+      </div>
+
+      <aside class="cart-summary">
+        <h3>ملخص الطلب</h3>
+        <div class="summary-row"><span>عدد القطع</span><span id="sum-count">0</span></div>
+        <div class="summary-total"><span>الإجمالي</span><strong id="sum-total">0 ر.س</strong></div>
+
+        <div class="field">
+          <label for="cust-name">الاسم الكامل</label>
+          <input type="text" id="cust-name" placeholder="اسمكِ الكريم">
+        </div>
+        <div class="field">
+          <label for="cust-phone">رقم الهاتف</label>
+          <input type="tel" id="cust-phone" placeholder="05xxxxxxxx">
+        </div>
+        <div class="field">
+          <label for="cust-address">عنوان التوصيل</label>
+          <textarea id="cust-address" rows="3" placeholder="المدينة، الحي، تفاصيل إضافية"></textarea>
+        </div>
+
+        <button id="whatsapp-order" class="btn btn-gold btn-block">إرسال الطلب عبر واتساب</button>
+        <p class="pd-note">سيتم فتح واتساب مع تفاصيل طلبكِ جاهزة للإرسال مباشرة إلى المتجر.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">© 2026 VELORA — جميع الحقوق محفوظة</div>
+  </div>
+</footer>
+
+<div class="drawer-overlay"></div>
+<aside class="cart-drawer">
+  <div class="drawer-head">
+    <h3>سلتي</h3>
+    <button class="drawer-close" aria-label="إغلاق">✕</button>
+  </div>
+  <div class="drawer-items"></div>
+  <div class="drawer-footer"></div>
+</aside>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/cart.js"></script>
+</body>
+</html>

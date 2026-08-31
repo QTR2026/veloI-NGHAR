@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VELORA | متجر التجميل والعطور والأزياء النسائي</title>
+<meta name="description" content="VELORA — وجهتكِ الفاخرة للتجميل والعطور والأزياء.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">تخطي إلى المحتوى</a>
+
+<div class="announce">شحن سريع لكل المدن — تواصلي معنا مباشرة عبر واتساب لإتمام طلبك</div>
+
+<header class="site-header">
+  <div class="container nav-row">
+    <button class="nav-toggle" aria-label="فتح القائمة">☰</button>
+    <a href="index.html" class="logo">VELO<span>RA</span></a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">الرئيسية</a>
+      <a href="index.html?cat=beauty#shop">التجميل</a>
+      <a href="index.html?cat=perfumes#shop">العطور</a>
+      <a href="index.html?cat=fashion#shop">الأزياء</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" data-open-cart aria-label="السلة">
+        🛍
+        <span class="cart-count" data-cart-count>0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="hero-deco" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <span class="hero-eyebrow">مجموعة الموسم</span>
+        <h1>جمالكِ يستحق لمسة فاخرة</h1>
+        <p>تشكيلة مختارة من مستحضرات التجميل والعطور والأزياء، بعناية تليق بذوقكِ الرفيع.</p>
+        <a href="#shop" class="btn btn-gold">تسوّقي الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>الأقسام</h2>
+        <span class="section-link"></span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="index.html?cat=beauty#shop">
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=600&auto=format&fit=crop" alt="التجميل">
+          <div class="cat-label"><h3>التجميل</h3><span>اكتشفي المجموعة</span></div>
+        </a>
+        <a class="cat-card" href="index.html?cat=perfumes#shop">
+          <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=600&auto=format&fit=crop" alt="العطور">
+          <div class="cat-label"><h3>العطور</h3><span>اكتشفي المجموعة</span></div>
+        </a>
+        <a class="cat-card" href="index.html?cat=fashion#shop">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600&auto=format&fit=crop" alt="الأزياء">
+          <div class="cat-label"><h3>الأزياء</h3><span>اكتشفي المجموعة</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>مختارات VELORA</h2>
+          <div class="sub">قطع اخترناها بعناية لكِ هذا الأسبوع</div>
+        </div>
+      </div>
+      <div class="prod-grid" id="featured-grid">
+        <div class="loader-row">جارِ تحميل المختارات…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="offers-band" id="offers">
+    <div class="section container">
+      <div class="section-head">
+        <div>
+          <h2>عروض حصرية</h2>
+          <div class="sub">لفترة محدودة</div>
+        </div>
+      </div>
+      <div class="prod-grid" id="offers-grid">
+        <div class="loader-row">جارِ تحميل العروض…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="shop">
+    <div class="container">
+      <div class="section-head">
+        <h2>جميع المنتجات</h2>
+        <div class="sub" style="display:flex; gap:20px;" id="cat-tabs">
+          <a href="index.html#shop" data-cat="">الكل</a>
+          <a href="index.html?cat=beauty#shop" data-cat="beauty">التجميل</a>
+          <a href="index.html?cat=perfumes#shop" data-cat="perfumes">العطور</a>
+          <a href="index.html?cat=fashion#shop" data-cat="fashion">الأزياء</a>
+        </div>
+      </div>
+      <div class="prod-grid" id="shop-grid">
+        <div class="loader-row">جارِ تحميل المنتجات…</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4 class="logo" style="margin-bottom:14px;">VELO<span>RA</span></h4>
+        <p>وجهتكِ الفاخرة للتجميل والعطور والأزياء. جودة مختارة، وتجربة تسوّق تليق بكِ.</p>
+      </div>
+      <div>
+        <h4>تسوّقي</h4>
+        <ul>
+          <li><a href="index.html?cat=beauty#shop">التجميل</a></li>
+          <li><a href="index.html?cat=perfumes#shop">العطور</a></li>
+          <li><a href="index.html?cat=fashion#shop">الأزياء</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>خدمة العملاء</h4>
+        <ul>
+          <li><a href="cart.html">سلة التسوّق</a></li>
+          <li><a href="#">سياسة الاستبدال</a></li>
+          <li><a href="#">تواصلي معنا</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تابعينا</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">TikTok</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 VELORA — جميع الحقوق محفوظة</div>
+  </div>
+</footer>
+
+<div class="drawer-overlay"></div>
+<aside class="cart-drawer">
+  <div class="drawer-head">
+    <h3>سلتي</h3>
+    <button class="drawer-close" aria-label="إغلاق">✕</button>
+  </div>
+  <div class="drawer-items"></div>
+  <div class="drawer-footer"></div>
+</aside>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/home.js"></script>
+</body>
+</html>

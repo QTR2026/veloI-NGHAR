@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة الإدارة | VELORA</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- ============ شاشة تسجيل الدخول ============ -->
+<section class="login-screen" id="login-screen">
+  <div class="login-card">
+    <span class="logo">VELO<span>RA</span></span>
+    <div class="login-sub">لوحة إدارة المتجر</div>
+    <div class="login-error" id="login-error"></div>
+    <form id="login-form">
+      <div class="field">
+        <label for="login-email">البريد الإلكتروني</label>
+        <input type="email" id="login-email" required autocomplete="username">
+      </div>
+      <div class="field">
+        <label for="login-password">كلمة المرور</label>
+        <input type="password" id="login-password" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-gold btn-block" id="login-btn">تسجيل الدخول</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ لوحة الإدارة ============ -->
+<div class="admin-shell" id="admin-shell">
+  <aside class="sidebar">
+    <span class="logo">VELO<span>RA</span></span>
+    <span class="role-tag" id="admin-email">—</span>
+    <nav>
+      <a href="#" class="active">المنتجات</a>
+      <a href="index.html" class="view-store" target="_blank">عرض المتجر ↗</a>
+    </nav>
+    <button class="signout" id="logout-btn">تسجيل الخروج</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1>إدارة المنتجات</h1>
+        <p>إضافة، تعديل، وحذف منتجات المتجر</p>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card"><div class="num" id="stat-total">0</div><div class="label">إجمالي المنتجات</div></div>
+      <div class="stat-card"><div class="num" id="stat-offers">0</div><div class="label">منتجات ضمن عروض</div></div>
+      <div class="stat-card"><div class="num" id="stat-featured">0</div><div class="label">منتجات مختارة</div></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2 id="form-title">إضافة منتج جديد</h2>
+        <button class="btn btn-outline btn-sm" id="cancel-edit" style="display:none;">إلغاء التعديل</button>
+      </div>
+
+      <form id="product-form">
+        <input type="hidden" id="prod-id">
+        <div class="img-preview" id="img-preview">لا توجد صورة</div>
+
+        <div class="form-grid">
+          <div class="field full">
+            <label for="prod-image">رابط الصورة (URL)</label>
+            <input type="url" id="prod-image" placeholder="https://example.com/image.jpg">
+          </div>
+
+          <div class="field">
+            <label for="prod-name">اسم المنتج</label>
+            <input type="text" id="prod-name" required>
+          </div>
+          <div class="field">
+            <label for="prod-category">التصنيف</label>
+            <select id="prod-category" required>
+              <option value="beauty">التجميل</option>
+              <option value="perfumes">العطور</option>
+              <option value="fashion">الأزياء</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="prod-price">السعر (ر.س)</label>
+            <input type="number" id="prod-price" min="0" step="0.01" required>
+          </div>
+          <div class="field">
+            <label for="prod-oldprice">السعر قبل الخصم (اختياري)</label>
+            <input type="number" id="prod-oldprice" min="0" step="0.01">
+          </div>
+
+          <div class="field full">
+            <label for="prod-desc">الوصف</label>
+            <textarea id="prod-desc" rows="4"></textarea>
+          </div>
+
+          <div class="full">
+            <div class="checkbox-row">
+              <input type="checkbox" id="prod-featured">
+              <label for="prod-featured">إظهار ضمن "مختارات VELORA"</label>
+            </div>
+            <div class="checkbox-row">
+              <input type="checkbox" id="prod-offer">
+              <label for="prod-offer">إظهار ضمن "عروض حصرية" (يتطلب سعر قبل الخصم)</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold" id="save-btn">حفظ المنتج</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>كل المنتجات</h2>
+      </div>
+      <div id="table-wrap">
+        <div class="empty-row">جارِ التحميل…</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script type="module" src="js/admin.js"></script>
+</body>
+</html>
